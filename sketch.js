@@ -57,8 +57,9 @@ function draw() {
     score=score+1;
   }
   
-  if (mouseDown("leftButton")){
+  if (touches.length>0 || keyDown(space)){
     bird.y=bird.y-10;
+    touches=[];
   }
     
     var rand=Math.round(random(1,3))
